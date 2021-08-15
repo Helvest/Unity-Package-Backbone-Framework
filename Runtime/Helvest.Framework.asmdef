@@ -1,0 +1,17 @@
+{
+    "name": "Helvest.Framework",
+    "rootNamespace": "HelvestFramework",
+    "references": [
+        "GUID:c5c8060cf7c62084ea2510eb3703b3be",
+        "GUID:2355a397eee9b0a4d903d1e6cebd56ba"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
