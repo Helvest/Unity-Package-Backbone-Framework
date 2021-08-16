@@ -4,6 +4,3 @@
 [submodule "Unity-Package-Stype-Machine"]
 	path = Unity-Package-Stype-Machine
 	url = https://github.com/Helvest/Unity-Package-Stype-Machine.git
-[submodule "Unity-Package-Rich-Text-Extension"]
-	path = Unity-Package-Rich-Text-Extension
-	url = https://github.com/Helvest/Unity-Package-Rich-Text-Extension.git

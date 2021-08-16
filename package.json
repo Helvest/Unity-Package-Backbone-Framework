@@ -1,14 +1,14 @@
 {
-	"name": "com.helvest.framework",
-	"version": "1.2.3",
-	"displayName": "Helvest Framework",
-	"description": "Framework",
-	"keywords": [
-		"Framework"
-	],
-	"author": {
-		"name": "Pedro Dominic\u00e9 (Helvest)",
-		"url": "https://twitter.com/HelvestEpic"
-	},
-	"type": "tool"
+  "name": "com.helvest.framework",
+  "version": "1.0.0",
+  "displayName": "Helvest Framework",
+  "description": "Framework",
+  "keywords": [
+    "Framework"
+  ],
+  "author": {
+    "name": "Pedro Dominic\u00e9 (Helvest)",
+    "url": "https://twitter.com/HelvestEpic"
+  },
+  "type": "library"
 }
