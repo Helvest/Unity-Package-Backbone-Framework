@@ -10,13 +10,27 @@ namespace Helvest.Framework
 	public class GameManager : TypeMachineController<GameModeBase>
 	{
 
+		#region Variables
+
+		[Header("Configs")]
+		[SerializeField]
+		private bool _dontDestroyOnLoad = true;
+
+		#endregion
+
 		#region Init
 
 		protected override void Awake()
 		{
 #if UNITY_EDITOR
-			SL.useDebugLog = useDebugForSL;
+			SL.useDebugLog = _useDebugForSL;
 #endif
+
+			if (_dontDestroyOnLoad)
+			{
+				DontDestroyOnLoad(gameObject);
+			}
+
 			base.Awake();
 
 			var states = GetComponentsInChildren<GameModeBase>();
@@ -69,7 +83,9 @@ namespace Helvest.Framework
 		#region Debug
 
 #if UNITY_EDITOR
-		public bool useDebugForSL = false;
+		[Header("Debug")]
+		[SerializeField]
+		protected bool _useDebugForSL = false;
 #endif
 
 		#endregion
