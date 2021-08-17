@@ -82,11 +82,9 @@ namespace Helvest.Framework
 
 		#region Debug
 
-#if UNITY_EDITOR
 		[Header("Debug")]
 		[SerializeField]
 		protected bool _useDebugForSL = false;
-#endif
 
 		#endregion
 
