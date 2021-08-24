@@ -48,6 +48,16 @@ namespace Helvest.Framework
 				return;
 			}
 
+			base.OnEnable();
+		}
+
+		protected override void ToStartState()
+		{
+			if (!hasStarted)
+			{
+				return;
+			}
+
 			if (_startState == null)
 			{
 				Debug.LogError("startState is null, GameManger can't start", this);
