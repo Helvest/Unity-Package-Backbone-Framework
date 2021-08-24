@@ -1,6 +1,6 @@
 {
   "name": "com.helvest.framework",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "Helvest Framework",
   "description": "Helvest's framework for Unity, contains the necessary to easily implement the following Design Patterns: \r\n- Service Locator\r\n- State Machine\r\n- Mediator\r\n\r\nAnd also contains:\r\nA special State Machine named Type Machine, which uses Types as state indexes, and thus allows each state to be coded in an independent class by inheriting from IState.\r\n\r\nAnd finally, an extensible game manager, derived from Type Machine, to define the states of your game, while mediating between your other scripts.",
   "keywords": [
