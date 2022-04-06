@@ -12,11 +12,15 @@ namespace BackboneFramework
 
 		#region Variables
 
-		[field: SerializeField]
-		public MonoServiceLocator SL { get; private set; } = default;
+		public MonoServiceLocator SL => ServiceLocator;
+
+		[field: SerializeField, Header("Backbone")]
+		public MonoServiceLocator ServiceLocator { get; private set; } = default;
+
+		public MonoTypeMachine SM => StateMachine;
 
 		[field: SerializeField]
-		public MonoTypeMachine SM { get; private set; } = default;
+		public MonoTypeMachine StateMachine { get; private set; } = default;
 
 		[Header("Configs")]
 		[SerializeField]
@@ -94,14 +98,14 @@ namespace BackboneFramework
 
 		protected virtual void OnValidate()
 		{
-			if (SL == null)
+			if (ServiceLocator == null)
 			{
-				SL = GetComponent<MonoServiceLocator>();
+				ServiceLocator = GetComponent<MonoServiceLocator>();
 			}
 
-			if (SM == null)
+			if (StateMachine == null)
 			{
-				SM = GetComponent<MonoTypeMachine>();
+				StateMachine = GetComponent<MonoTypeMachine>();
 			}
 		}
 
