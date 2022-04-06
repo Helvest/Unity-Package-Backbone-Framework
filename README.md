@@ -1,6 +1,6 @@
-# Unity Package: Helvest Backbone Framework
+# Unity Package: Backbone Framework
 
-Helvest's backbone framework for Unity, contains the necessary to easily implement the following Design Patterns: 
+Backbone framework for Unity, contains the necessary to easily implement the following Design Patterns: 
 - [Service Locator](https://github.com/Helvest/Unity-Package-Service-Locator.git)
 - [Mediator](https://github.com/Helvest/Unity-Package-Service-Locator.git)
 - [Finite-State Machine](https://github.com/Helvest/Unity-Package-Stype-Machine.git)
