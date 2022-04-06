@@ -3,7 +3,7 @@ using HelvestSL;
 using StypeMachine;
 using UnityEngine;
 
-namespace Helvest.Framework
+namespace BackboneFramework
 {
 	[RequireComponent(typeof(MonoServiceLocator))]
 	[RequireComponent(typeof(MonoTypeMachine))]
