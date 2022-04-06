@@ -48,50 +48,6 @@ public abstract class Backbone : MonoBehaviour, IHoldSL, IHoldTM
 
 	#endregion
 
-	#region Service Locator
-
-	public bool Add<T>(T instance) where T : MonoBehaviour
-	{
-		return SL.Add(instance);
-	}
-
-	public bool Remove<T>() where T : class
-	{
-		return SL.Remove<T>();
-	}
-
-	public bool TryGetIfNull<T>(ref T instance, Action<T> callback = null) where T : class
-	{
-		return SL.TryGetIfNull(ref instance, callback);
-	}
-
-	#endregion
-
-	#region State Machine
-
-	public void SetState<t>() where t : MonoBehaviour
-	{
-		TM.SetState<t>();
-	}
-
-	public void SetState<t>(t instance) where t : MonoBehaviour
-	{
-		TM.SetState(instance);
-	}
-
-	public void SetState(Type type)
-	{
-		TM.SetState(type);
-	}
-
-	public Type State
-	{
-		get => TM.State;
-		set => TM.State = value;
-	}
-
-	#endregion
-
 	#region OnValidate
 
 	protected virtual void OnValidate()
