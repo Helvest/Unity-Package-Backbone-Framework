@@ -1,39 +1,21 @@
-using HelvestSL;
-using StypeMachine;
 using UnityEngine;
 
 [RequireComponent(typeof(MonoServiceLocator))]
 [RequireComponent(typeof(MonoTypeMachine))]
-public abstract class Backbone : MonoBehaviour, IHoldSL, IHoldTM
+public abstract class Backbone : MonoBehaviour
 {
 
 	#region Variables
 
-	public ServiceLocator SL => ServiceLocator.SL;
-
 	[field: SerializeField, Header("Backbone")]
-	public MonoServiceLocator ServiceLocator { get; private set; } = default;
-
-	public TypeMachine TM => StateMachine.TM;
+	public MonoServiceLocator SL { get; private set; } = default;
 
 	[field: SerializeField]
-	public MonoTypeMachine StateMachine { get; private set; } = default;
-
-	[Header("Configs")]
-	[SerializeField]
-	private bool _dontDestroyOnLoad = true;
+	public MonoTypeMachine TM { get; private set; } = default;
 
 	#endregion
 
 	#region Init
-
-	protected virtual void Awake()
-	{
-		if (_dontDestroyOnLoad)
-		{
-			DontDestroyOnLoad(gameObject);
-		}
-	}
 
 	protected virtual void OnEnable()
 	{
@@ -51,14 +33,14 @@ public abstract class Backbone : MonoBehaviour, IHoldSL, IHoldTM
 
 	protected virtual void OnValidate()
 	{
-		if (ServiceLocator == null)
+		if (SL == null)
 		{
-			ServiceLocator = GetComponent<MonoServiceLocator>();
+			SL = GetComponent<MonoServiceLocator>();
 		}
 
-		if (StateMachine == null)
+		if (TM == null)
 		{
-			StateMachine = GetComponent<MonoTypeMachine>();
+			TM = GetComponent<MonoTypeMachine>();
 		}
 	}
 
